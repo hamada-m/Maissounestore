@@ -5,6 +5,7 @@ use App\Product;
 use App\Category;
 use App\Http\Requests\ProductsValidationRequest;
 use Illuminate\Http\Request;
+use Auth;
 
 class ProductsController extends Controller
 {
@@ -14,8 +15,11 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {;
+        if(auth()->guest() || Auth::user()->is_admin == 0) {
+            return redirect('/login');
+        }
+        
         return view('products.index')->with(['products'=>Product::all()]);
     }
 
@@ -26,7 +30,9 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        if(auth()->guest() && Auth::id()->is_admin == 0) {
+            return redirect('/login');
+        }
         return view('products.create')->with(['categories'=>Category::all()]);
     }
 
