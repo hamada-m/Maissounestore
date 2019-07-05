@@ -8,7 +8,7 @@
          <div class="col-md-12 mb-3">
                <div class="card p-2 bg-light text-center">
                   <div class=" card-body ">
-                        <h3 class=" card-title">{{$product->title}}</h3>
+                        <h3 class=" card-title" style="font-size: 1em;">{{$product->title}}</h3>
                         <hr>
                         <div class="card-img mt-2 mb-2">
                            <img src="{{URL::to('images/'.$product->file)}}" class= "img-fluid rounded" alt="">

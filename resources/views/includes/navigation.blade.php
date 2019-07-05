@@ -1,14 +1,16 @@
 
     <!-- Second navbar for categories -->
-    <nav class="navbar navbar-expand-sm rounded mb-4 font-weight-bold navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-sm rounded font-weight-bold navbar-dark bg-danger">
          <a class="navbar-brand" href="#">Maissounestore</a>
          <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation"></button> 
-         <div class="collapse navbar-collapse" id="collapseibleNavId">
+         <div class="collapse navbar-collapse justify-content-between" id="collapseibleNavId">
             <ul class=" navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item"><a href="{{url('/')}}"  class="nav-link">Accueil</a></li>
                 <li class="nav-item" ><a href="{{route('products.index')}}" class="nav-link" >Produits</a></li>
-                @auth
-                <li class="nav-item"><a href="#"  class="nav-link" >{{Auth::user()->name}}</a></li>
+            
+            </ul>
+            <ul class=" navbar-nav mt-2 mt-lg-0" >
+            @auth
                 <li class="nav-item"><a href="{{route('user.logout')}}"  class="nav-link" >Déconnexion</a></li>
                 @if(auth()->user()->isAdmin())
                    <li class="nav-item">
@@ -17,6 +19,8 @@
                           admin
                       </a>
                       <div class="dropdown-menu " aria-labelledby="triggerId">
+                        <a class="dropdown-item" href="#">{{Auth::user()->name}}</a>
+                        <hr>
                         <a class="dropdown-item" href="{{route('products.create')}}">Ajouter un produit</a>
                         <a class="dropdown-item" href="{{route('products.index')}}">Produits</a>
                         
