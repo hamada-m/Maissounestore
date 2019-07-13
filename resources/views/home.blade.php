@@ -28,7 +28,7 @@
                         <div class="card-img mt-2 mb-2">
                            <img src="{{URL::to('images/'.$product->file)}}" class= "img-fluid rounded" alt="">
                         </div>
-                        <div class=" mt-2 p-2" style="text-align:left; font-size: 12px;">#{{$product->category->name}}<span class="badge badge-info p-2" style="text-align:right; float: right;">{{$product->price}} DH</span> </div>
+                        <div class=" mt-2 p-2" style="text-align:left; font-size: 12px; font-weight:bold; "># {{$product->category->name}}<span class="badge badge-info p-2" style="text-align:right; float: right;">{{$product->price}} DH</span> </div>
                    </div>
                    <div class="card-footer">
                      <a href="{{route('products.show',['slug'=>$product->slug])}}" class="btn btn-primary btn-block">Voir</a>

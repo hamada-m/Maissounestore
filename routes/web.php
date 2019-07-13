@@ -71,3 +71,7 @@ Route::post('/pay',[
     'uses'=>'CheckoutController@pay',
     'as'=>'cart.pay'
 ]);  
+Route::post('/pro',[
+    'uses'=>'CheckoutController@pay',
+    'as'=>'cart.pay'
+]);  

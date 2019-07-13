@@ -6,7 +6,7 @@
             <div class="clearfix"></div>
             <ul class="list-group">
                  @foreach($categories as $categorie)
-                    <li class="list-group-item"><a href="#">{{$categorie->name}}</a>
+                    <li class="list-group-item"><a href="category/{{$categorie->id}}">{{$categorie->name}}</a>
                         <span class="badge badge-primary shadow p-2 rounded float-right">
                              {{$categorie->products->count()}}
                         </span></li>

@@ -5,7 +5,7 @@
          <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation"></button> 
          <div class="collapse navbar-collapse justify-content-between" id="collapseibleNavId">
             <ul class=" navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a href="{{url('/')}}"  class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="{{url('/')}}"  class="nav-link"><i class="fas fa-home"></i> Accueil</a></li>
                 <li class="nav-item" ><a href="{{route('products.index')}}" class="nav-link" >Produits</a></li>
             
             </ul>
@@ -32,7 +32,7 @@
                 <li class="nav-item"><a href="{{route('login')}}"  class="nav-link" >Connexion</a></li>
 
             @endauth
-                <li class="nav-item"><a href="{{route('cart.index')}}"  class="nav-link">Panier <span class="badge badge-light p-2 rounded">{{Cart::content()->count()}}</span></a></li>
+                <li class="nav-item"><a href="{{route('cart.index')}}"  class="nav-link"><i class="fas fa-cart-plus"></i> Panier <span class="badge badge-light p-2 rounded">{{Cart::content()->count()}}</span></a></li>
             </ul>
         </div>
     </nav>

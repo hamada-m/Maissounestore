@@ -15,7 +15,7 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {;
+    {
         if(auth()->guest() || Auth::user()->is_admin == 0) {
             return redirect('/login');
         }

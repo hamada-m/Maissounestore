@@ -39,3 +39,19 @@ ul.qteList li{
   .StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
   }
+  .stats {
+    background: url(../images/bg2.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+p.counter {
+  color: #fff;
+  font-size: 3.5em;
+  font-weight: 700;
+}
+.text-li {
+  color: #f8f9fa;
+}
